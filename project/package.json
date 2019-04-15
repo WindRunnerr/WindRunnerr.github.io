@@ -10,8 +10,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.7.2",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lodash": "^4.17.11",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue2-animate": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
