@@ -1,15 +1,30 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import index from '@/components/index'
+import VueRouter from 'vue-router'
+import home from '@/components/home'
+import resume from '@/components/resume'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
-    }
-  ]
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: home
+  },
+  {
+    path: '/resume',
+    name: 'Resume',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: resume
+  }
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  // base: process.env.BASE_URL,
+  routes
 })
+
+export default router
